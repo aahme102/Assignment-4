@@ -1,0 +1,58 @@
+---
+title: "Assignment 4"
+author: "Anous Ahmed"
+format: pdf
+editor: visual
+---
+
+```{r}
+1 + 1
+```
+
+# Part 1 - Update on the project
+
+**Project title and description**
+
+**Title:** The Impact of Unemployment on Societal Well-Being: A Cross-Country Correlation Analysis
+
+**Description:** Unemployment is a critical socio-economic issue affecting millions of individuals worldwide. Beyond financial instability, joblessness can significantly impact mental and physical well-being. The main question driving the analysis is: How does unemployment correlate with broader indicators of individual and national well-being.
+
+To answer this, I am using aggregated, publicly available country-level datasets from the World Bank. These datasets include annual data on unemployment rates, GDP (current US\$), suicide rates, school enrollment, and the percentage of individuals using the internet, among other indicators.
+
+The goal of the project is to identify and interpret significant correlations between unemployment and other variables to uncover macro-level patterns. While causality is not the primary focus, the project aims to support a deeper understanding of how joblessness may be associated with changes in national well-being over time and across diverse country contexts.
+
+The expected outcome is a set of visualizations and correlation analyses that inform future research and policy. This analysis can provide early signals for targeted policy responses.
+
+**Data:**
+
+For this project, I am using aggregated, country-level data from the World Bank. The datasets include the following main variables:
+
+-   Unemployment rate (% of total labor force)
+
+-   GDP (current US\$)
+
+-   Suicide rate (per 100,000 population)
+
+-   School enrollment, primary (gross% %)
+
+-   Individuals using the Internet (% of population)
+
+-   Fertility rate, total (births per woman)
+
+So far, I have compiled data for approximately 10 countries, spanning 24 years, although the exact number may vary depending on variable availability. On the other hand, I have about 500 rows and 9 observations in my dataset.The cleaning process has involved standardizing country names and codes for merging datasets. There are missing values in my dataset which I will look at once the dataset has been finalized. Perhaps the most difficult process has been compiling the dataset. It is an ongoing process which is time consuming and tedious.
+
+For now, I will only upload the dataset that I have compiled. I will not be able to perform visualizations since my dataset is not complete. 
+
+```{r}
+country_data <- read.csv("Dataset.csv")
+```
+
+**Models and Methods**
+
+For this project, I am primarily using multiple linear regression models to explore the relationship between unemployment rates (independent variable) and the other variables (dependent variable). I plan to explore correlation analysis as a preliminary step to understand the strength and direction of relationships between unemployment and the other variables. If time and data structure permit, I also plan to conduct time-series analysis to observe trends and possible lag effects, especially for countries with longer-term data available.
+
+**Next steps**
+
+In the coming weeks, I plan to finalize my dataset to carry out the statistical tasks for this project. I will be focusing on finalizing the data cleaning process and moving into the modeling phase of the project. My first step will be to run multiple linear regressions for each of the outcome variables—such as GDP, suicide rate, internet usage, and school enrollment—using unemployment as the key predictor. One of the major challenges I foresee is ensuring alignment and comparability across datasets from different countries and time periods. Some datasets contain missing values for certain years or countries, which could limit the sample size and potentially bias the results. Additionally, interpreting the results across different national contexts will require caution, as socio-economic structures vary widely.
+
+# Part 2 - Trying out APIs, and/or the text package
